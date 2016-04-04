@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: Wrap entry content with ScrollView -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.cafecode.android.workshop3.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/place_detail_photo_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder"/>
+
+        <TextView
+            android:id="@+id/place_detail_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="name"/>
+
+        <TextView
+            android:id="@+id/place_detail_address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="address"/>
+
+        <TextView
+            android:id="@+id/place_detail_phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: (02) 9439 1748"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/place_detail_rating_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="#000000"
+            android:text="4.5"/>
+
+        <TextView
+            android:id="@+id/place_detail_review_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="review"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/progressBar"/>
+
+        <!-- Photo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/place_photo_1_image"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/place1"/>
+            <ImageView
+                android:id="@+id/place_photo_2_image"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/place2"/>
+            <ImageView
+                android:id="@+id/place_photo_3_image"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/place3"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/place_detail_review_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#004996"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:text="Review"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/place_review_author_1_profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/place_review_author_1_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Author name"/>
+            <TextView
+                android:id="@+id/place_review_author_1_rating_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating 4.5"/>
+            <TextView
+                android:id="@+id/place_review_author_1_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banoffee tart is a treat (when it is on the menu, seems to be a irregular item). Their meat pies are good and Dennis makes a mean brew. Can be very busy sometimes. Are kid friendly!"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/place_review_author_2_profile_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/place_review_author_2_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Author name"/>
+            <TextView
+                android:id="@+id/place_review_author_2_rating_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating 4.5"/>
+            <TextView
+                android:id="@+id/place_review_author_2_description_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Banoffee tart is a treat (when it is on the menu, seems to be a irregular item). Their meat pies are good and Dennis makes a mean brew. Can be very busy sometimes. Are kid friendly!"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

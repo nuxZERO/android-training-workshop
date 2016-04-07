@@ -19,7 +19,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,12 +140,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-        dialog.setNeutralButton("No thanks", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
+//        dialog.setNeutralButton("No thanks", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//
+//            }
+//        });
         dialog.show();
     }
 
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void multipleChoiceListDialog() {
         // TODO: 09 - Multiple choice list dialog
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setTitle("Single Choice");
+        dialog.setTitle("Multiple choice Choice");
 
         final String[] choices = { "Choice 1", "Choice 2", "Choice 3" };
         final boolean[] checked = { false, false, false };

@@ -1,7 +1,7 @@
 # android-training-workshop
 Resource for android training workshop.
 
-### MyApplication
+### Workshop 1
 1. Create `ImageView` id `@+id/photo_image`
 2. Copy image file to `drawable` directory and set image
 3. Create `TextView` id `@+id/title_text` and set text
@@ -25,9 +25,7 @@ Resource for android training workshop.
 21. Add `Breakpoint` and run in __debug mode__.
 22. Complete workshop1.
 
-## Workshop1
-
-### TODO 01
+### Workshop 2
 ```java
 Uri gmmIntentUri = Uri.parse("google.navigation:q=16.8405744,100.2313737&mode=d");
 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);

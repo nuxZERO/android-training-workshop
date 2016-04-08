@@ -39,4 +39,24 @@ Resource for android training workshop.
 11. Build __Custom Content Dialog__.
 
 ### Workshop 3
-1. 
+1. `MainActivity.java` Delete hardcore coding
+2. `activity_main.xml` Delete hardcore layout
+3. `build.gradle` Add RecyclerView compile
+4. `activity_main.xml` Insert RecyclerView
+5. `MainActivity.java` Get RecyclerView
+6. `MainActivity.java` Set layout manager
+7. `PlaceAdapter.java` Make PlaceAdapter is subclass of RecyclerView.Adapter<PlaceViewHolder>
+8. `PlaceAdapter.java` Create constructor
+9. `PlaceAdapter.java` Create view for row from layout
+10. `PlaceViewHolder.java` Make PlaceViewHolder is subclass of RecyclerView.ViewHolder
+11. `PlaceViewHolder.java` Create fields
+12. `PlaceViewHolder.java` Get view from `adapter_place` layout
+13. `PlaceAdapter.java` Return number of rows in RecyclerView
+14. `MainActivity.java` Set adapter
+15. `PlaceAdapter.java` Bind view
+16. `PlaceAdapter.java` Pass data
+17. `PlaceAdapter.java` Pass Parcel object
+18. `Place.java` Implement Parcelable
+19. `DetailActivity.java` Get parcel object from intent
+20. `DetailActivity.java` Bind views with place object
+21. `activity_detail.xml` Wrap entry content with ScrollView

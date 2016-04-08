@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         photoImage.setImageResource(R.drawable.place2);
         titleText.setText("Hello Nux!");
         subtitleText.setText("Do you want a coffee?");
-        sendMessageButton.setOnClickListener(new View.OnClickListener() {
+        /*sendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String message = messageInput.getText().toString();
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 }

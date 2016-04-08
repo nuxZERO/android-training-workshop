@@ -17,26 +17,29 @@ import me.cafecode.android.workshop3.models.Place;
  * Created by Natthawut Hemathulin on 4/5/16 AD.
  * Email: natthawut1991@gmail.com
  */
+// TODO: 07 - Make PlaceAdapter is subclass of RecyclerView.Adapter<PlaceViewHolder>
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceViewHolder> {
 
-    private List<Place> places;
-    private Context context;
+    private List<Place> mPlaces;
+    private Context mContext;
 
+    // TODO: 08 - Create constructor
     public PlaceAdapter(Context context, List<Place> places) {
-        this.context = context;
-        this.places = places;
+        mContext = context;
+        mPlaces = places;
     }
 
+    // TODO: 09 - Create view for row from layout
     @Override
     public PlaceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(context).inflate(R.layout.adapter_place, parent, false);
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.adapter_place, parent, false);
         return new PlaceViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(PlaceViewHolder holder, int position) {
-        final Place place = places.get(position);
-        // TODO: Bind view
+        // TODO: 15 - Bind view
+        final Place place = mPlaces.get(position);
         holder.photoImage.setImageResource(place.getPhoto());
         holder.nameText.setText(place.getName());
         holder.ratingText.setText(Double.toString(place.getRating()));
@@ -51,21 +54,22 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceViewHolder> {
 
     @Override
     public int getItemCount() {
-        return places.size();
+        // TODO: 13 - Return number of rows in RecyclerView
+        return mPlaces.size();
     }
 
     private void startPlaceDetailActivity(Place place) {
-        // TODO: Pass data
-        Intent placeIntent = new Intent(context, DetailActivity.class);
+        // TODO: 16 - Pass data
+        Intent placeIntent = new Intent(mContext, DetailActivity.class);
         placeIntent.putExtra("photo", place.getPhoto());
         placeIntent.putExtra("name", place.getName());
         placeIntent.putExtra("rating", place.getRating());
         placeIntent.putExtra("address", place.getAddress());
         placeIntent.putExtra("review", place.getReview());
 
-        // TODO: Pass Parcel object
+        // TODO: 17 - Pass Parcel object
         placeIntent.putExtra("place", place);
-        context.startActivity(placeIntent);
+        mContext.startActivity(placeIntent);
     }
 
 }

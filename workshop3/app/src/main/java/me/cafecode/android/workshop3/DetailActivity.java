@@ -25,16 +25,17 @@ public class DetailActivity extends AppCompatActivity {
         TextView reviewText = (TextView) findViewById(R.id.place_detail_review_text);
         RatingBar ratingBar = (RatingBar) findViewById(R.id.place_detail_rating_bar);
 
-        // TODO: Get intent data
+        // Get intent data
         @DrawableRes int photo = getIntent().getIntExtra("photo", -1);
         String name = getIntent().getStringExtra("name");
         String address = getIntent().getStringExtra("address");
         double rating = getIntent().getDoubleExtra("rating", -1);
         String review = getIntent().getStringExtra("review");
 
+        // TODO: 19 - Get parcel object from intent
         Place place = getIntent().getParcelableExtra("place");
 
-        // TODO: Bind data and views
+        // Bind data and views
 //        photoImage.setImageResource(photo);
 //        nameText.setText(name);
 //        addressText.setText(address);
@@ -42,7 +43,7 @@ public class DetailActivity extends AppCompatActivity {
 //        reviewText.setText(review);
 //        ratingBar.setRating((float) rating);
 
-        // TODO: Bind views with place object
+        // TODO: 20 - Bind views with place object
         photoImage.setImageResource(place.getPhoto());
         nameText.setText(place.getName());
         addressText.setText(place.getAddress());

@@ -26,9 +26,17 @@ Resource for android training workshop.
 22. Complete workshop1.
 
 ### Workshop 2
-```java
-Uri gmmIntentUri = Uri.parse("google.navigation:q=16.8405744,100.2313737&mode=d");
-Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-mapIntent.setPackage("com.google.android.apps.maps");
-startActivity(mapIntent);
-```
+1. Build __Simple Toast__.
+2. Build __Align Toast__.
+3. Build __Custom Toast__.
+4. Build __Simple Dialog__.
+5. Build __Simple Dialog__.
+6. Build __Progress Dialog__.
+7. Build __List Dialog__.
+8. Build __Single Choice Dialog__.
+9. Build __Multiple Choices Dialog__.
+10. Build __Date Picker Dialog__.
+11. Build __Custom Content Dialog__.
+
+### Workshop 3
+1. 

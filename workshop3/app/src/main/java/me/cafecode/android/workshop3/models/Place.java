@@ -8,6 +8,7 @@ import android.support.annotation.DrawableRes;
  * Created by Natthawut Hemathulin on 8/8/15 AD.
  * Email: natthawut1991@gmail.com
  */
+// TODO: 18 - Implement Parcelable
 public class Place implements Parcelable {
 
     private String id = "";

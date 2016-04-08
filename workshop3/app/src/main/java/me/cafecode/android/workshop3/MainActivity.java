@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         // Init list of mPlaces
         mPlaces = generateData();
 
-        // TODO: Hardcore coding
+        // TODO: 01 - Delete hardcore coding
         // Place 1
         ImageView placePhoto1Image = (ImageView) findViewById(R.id.place_1_image);
         TextView placeName1Text = (TextView) findViewById(R.id.place_1_name_text);
@@ -67,16 +67,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // TODO: Get RecyclerView
+        // TODO: 05 - Get RecyclerView
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.place_list);
 
-        // TODO: Set layout manager
+        // TODO: 06 - Set layout manager
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL,
                 false);
         recyclerView.setLayoutManager(layoutManager);
 
-        // TODO: Set adapter
+        // TODO: 14 - Set adapter
         PlaceAdapter adapter = new PlaceAdapter(this, mPlaces);
         recyclerView.setAdapter(adapter);
 
@@ -84,16 +84,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void startPlaceDetailActivity(Place place) {
         Intent placeIntent = new Intent(this, DetailActivity.class);
-        // TODO: Pass data
-//        placeIntent.putExtra("photo", place.getPhoto());
-//        placeIntent.putExtra("name", place.getName());
-//        placeIntent.putExtra("rating", place.getRating());
-//        placeIntent.putExtra("address", place.getAddress());
-//        placeIntent.putExtra("review", place.getReview());
-
-        // TODO: Pass Parcel object
-        placeIntent.putExtra("place", place);
-
+        // TODO: 02 - Pass data
+        placeIntent.putExtra("photo", place.getPhoto());
+        placeIntent.putExtra("name", place.getName());
+        placeIntent.putExtra("rating", place.getRating());
+        placeIntent.putExtra("address", place.getAddress());
+        placeIntent.putExtra("review", place.getReview());
         startActivity(placeIntent);
     }
 

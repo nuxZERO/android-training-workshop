@@ -18,63 +18,52 @@ import me.cafecode.android.workshop3.models.Place;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Place> places;
-
-    private TextView placeName1Text;
-    private TextView address1Text;
-    private TextView rating1Text;
-    private ImageView placePhoto1Image;
-
-    private TextView placeName2Text;
-    private TextView address2Text;
-    private TextView rating2Text;
-    private ImageView placePhoto2Image;
+    private List<Place> mPlaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Init list of places
-        places = generateData();
+        // Init list of mPlaces
+        mPlaces = generateData();
 
         // TODO: Hardcore coding
         // Place 1
-        placePhoto1Image = (ImageView) findViewById(R.id.place_1_image);
-        placeName1Text = (TextView) findViewById(R.id.place_1_name_text);
-        address1Text = (TextView) findViewById(R.id.place_1_address_text);
-        rating1Text = (TextView) findViewById(R.id.place_1_rating_text);
+        ImageView placePhoto1Image = (ImageView) findViewById(R.id.place_1_image);
+        TextView placeName1Text = (TextView) findViewById(R.id.place_1_name_text);
+        TextView address1Text = (TextView) findViewById(R.id.place_1_address_text);
+        TextView rating1Text = (TextView) findViewById(R.id.place_1_rating_text);
 
-        Place place1 = places.get(0);
+        Place place1 = mPlaces.get(0);
         placePhoto1Image.setImageResource(place1.getPhoto());
         placeName1Text.setText(place1.getName());
         address1Text.setText(place1.getAddress());
         rating1Text.setText(String.format(Locale.getDefault(), "%.1f", place1.getRating()));
 
         // Place 2
-        placePhoto2Image = (ImageView) findViewById(R.id.place_2_image);
-        placeName2Text = (TextView) findViewById(R.id.place_2_name_text);
-        address2Text = (TextView) findViewById(R.id.place_2_address_text);
-        rating2Text = (TextView) findViewById(R.id.place_2_rating_text);
+        ImageView placePhoto2Image = (ImageView) findViewById(R.id.place_2_image);
+        TextView placeName2Text = (TextView) findViewById(R.id.place_2_name_text);
+        TextView address2Text = (TextView) findViewById(R.id.place_2_address_text);
+        TextView rating2Text = (TextView) findViewById(R.id.place_2_rating_text);
 
-        Place place2 = places.get(1);
+        Place place2 = mPlaces.get(1);
         placePhoto2Image.setImageResource(place2.getPhoto());
         placeName2Text.setText(place2.getName());
         address2Text.setText(place2.getAddress());
         rating2Text.setText(String.format(Locale.getDefault(), "%.1f", place2.getRating()));
 
-
         placePhoto1Image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startPlaceDetailActivity(places.get(0));
+                startPlaceDetailActivity(mPlaces.get(0));
             }
         });
 
         placePhoto2Image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startPlaceDetailActivity(places.get(1));
+                startPlaceDetailActivity(mPlaces.get(1));
             }
         });
 
@@ -88,18 +77,23 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         // TODO: Set adapter
-        PlaceAdapter adapter = new PlaceAdapter(this, places);
+        PlaceAdapter adapter = new PlaceAdapter(this, mPlaces);
         recyclerView.setAdapter(adapter);
 
     }
 
     private void startPlaceDetailActivity(Place place) {
         Intent placeIntent = new Intent(this, DetailActivity.class);
-        placeIntent.putExtra("photo", place.getPhoto());
-        placeIntent.putExtra("name", place.getName());
-        placeIntent.putExtra("rating", place.getRating());
-        placeIntent.putExtra("address", place.getAddress());
-        placeIntent.putExtra("review", place.getReview());
+        // TODO: Pass data
+//        placeIntent.putExtra("photo", place.getPhoto());
+//        placeIntent.putExtra("name", place.getName());
+//        placeIntent.putExtra("rating", place.getRating());
+//        placeIntent.putExtra("address", place.getAddress());
+//        placeIntent.putExtra("review", place.getReview());
+
+        // TODO: Pass Parcel object
+        placeIntent.putExtra("place", place);
+
         startActivity(placeIntent);
     }
 

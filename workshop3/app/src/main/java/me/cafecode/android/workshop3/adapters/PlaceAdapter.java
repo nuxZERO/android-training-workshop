@@ -55,12 +55,16 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceViewHolder> {
     }
 
     private void startPlaceDetailActivity(Place place) {
+        // TODO: Pass data
         Intent placeIntent = new Intent(context, DetailActivity.class);
         placeIntent.putExtra("photo", place.getPhoto());
         placeIntent.putExtra("name", place.getName());
         placeIntent.putExtra("rating", place.getRating());
         placeIntent.putExtra("address", place.getAddress());
         placeIntent.putExtra("review", place.getReview());
+
+        // TODO: Pass Parcel object
+        placeIntent.putExtra("place", place);
         context.startActivity(placeIntent);
     }
 

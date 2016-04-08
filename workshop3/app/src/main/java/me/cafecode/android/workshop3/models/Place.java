@@ -1,14 +1,14 @@
 package me.cafecode.android.workshop3.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.annotation.DrawableRes;
-
-import java.util.List;
 
 /**
  * Created by Natthawut Hemathulin on 8/8/15 AD.
  * Email: natthawut1991@gmail.com
  */
-public class Place {
+public class Place implements Parcelable {
 
     private String id = "";
     private String name = "";
@@ -16,12 +16,6 @@ public class Place {
     private double rating = 0.0;
     private @DrawableRes int photo;
     private String review;
-
-    // Advance
-    private Geometry geometry;
-    private String phone = "";
-    private List<Photo> photos;
-    private List<Review> reviews;
 
     public Place() {
 
@@ -35,16 +29,26 @@ public class Place {
         this.review = review;
     }
 
-    public Place(String id, String name, String address, double rating, Geometry geometry, String phone, List<Photo> photos, List<Review> reviews) {
-        this.id = id;
-        this.name = name;
-        this.address = address;
-        this.rating = rating;
-        this.geometry = geometry;
-        this.phone = phone;
-        this.photos = photos;
-        this.reviews = reviews;
+    protected Place(Parcel in) {
+        id = in.readString();
+        name = in.readString();
+        address = in.readString();
+        rating = in.readDouble();
+        photo = in.readInt();
+        review = in.readString();
     }
+
+    public static final Creator<Place> CREATOR = new Creator<Place>() {
+        @Override
+        public Place createFromParcel(Parcel in) {
+            return new Place(in);
+        }
+
+        @Override
+        public Place[] newArray(int size) {
+            return new Place[size];
+        }
+    };
 
     public String getId() {
         return id;
@@ -78,38 +82,6 @@ public class Place {
         this.rating = rating;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public List<Photo> getPhotos() {
-        return photos;
-    }
-
-    public void setPhotos(List<Photo> photos) {
-        this.photos = photos;
-    }
-
-    public List<Review> getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(List<Review> reviews) {
-        this.reviews = reviews;
-    }
-
-    public Geometry getGeometry() {
-        return geometry;
-    }
-
-    public void setGeometry(Geometry geometry) {
-        this.geometry = geometry;
-    }
-
     public int getPhoto() {
         return photo;
     }
@@ -125,4 +97,20 @@ public class Place {
     public void setReview(String review) {
         this.review = review;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(name);
+        dest.writeString(address);
+        dest.writeDouble(rating);
+        dest.writeInt(photo);
+        dest.writeString(review);
+    }
+
 }

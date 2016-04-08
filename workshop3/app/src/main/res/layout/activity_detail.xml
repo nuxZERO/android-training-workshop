@@ -20,24 +20,26 @@
             android:scaleType="fitXY"
             android:src="@drawable/placeholder"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
                 android:id="@+id/place_detail_name_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/place_detail_rating_text"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                android:text="name"/>
+                android:text="Novotel Sydney on Darling Harbour, 100 Murray Street, Pyrmont"/>
 
             <TextView
                 android:id="@+id/place_detail_address_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/place_detail_name_text"
+                android:layout_marginTop="8dp"
                 android:text="address"/>
 
             <TextView
@@ -51,124 +53,47 @@
                 android:id="@+id/place_detail_rating_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
                 android:textSize="32sp"
                 android:textColor="#000000"
                 android:text="4.5"/>
+
+            <RatingBar
+                android:id="@+id/place_detail_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_below="@id/place_detail_rating_text"
+                android:layout_alignLeft="@id/place_detail_rating_text"
+                android:layout_alignRight="@id/place_detail_rating_text"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:isIndicator="false"
+                style="?android:attr/ratingBarStyleSmall"
+                android:rating="4.5"/>
+
+            <TextView
+                android:id="@+id/place_detail_review_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_below="@id/place_detail_address_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Review"/>
 
             <TextView
                 android:id="@+id/place_detail_review_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/place_detail_review_header_text"
+                android:layout_marginTop="16dp"
                 android:textColor="#000000"
-                android:text="review"/>
+                android:text="Located on a side street from the bustling thoroughfare of Crows Nest (Willoughby Rd), this place is huge compared to the neighbouring restaurants. During Summer when the weather is nice, you will find tables encroaching onto the sidewalk and is a local favourite. \n\nFood-wise, you will find some traditional greek staples alongside some modern dishes. Definitely brings me back to the last time I was hopping around the Greek Islands. \n\nService is average. As it is a popular place, sometimes it can be hard to get a hold of a waiter/waitress. This is not to say that service is generally poor. Just non-memorable. \n\nFor a meal here, you would be expected to pay Crows Nest prices. Which is to say slightly above the average meal in Sydney. Not outrageous by any means, and to be fair is quite reasonable for the area."/>
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:id="@+id/progressBar"/>
-
-        </LinearLayout>
-
-        <!-- Photo -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/place_photo_1_image"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:scaleType="fitXY"
-                android:src="@drawable/place1"/>
-            <ImageView
-                android:id="@+id/place_photo_2_image"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:scaleType="fitXY"
-                android:src="@drawable/place2"/>
-            <ImageView
-                android:id="@+id/place_photo_3_image"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:scaleType="fitXY"
-                android:src="@drawable/place3"/>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/place_detail_review_header_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#004996"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"
-            android:text="Review"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/place_review_author_1_profile_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@android:color/darker_gray"/>
-
-            <TextView
-                android:id="@+id/place_review_author_1_name_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Author name"/>
-            <TextView
-                android:id="@+id/place_review_author_1_rating_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rating 4.5"/>
-            <TextView
-                android:id="@+id/place_review_author_1_description_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Banoffee tart is a treat (when it is on the menu, seems to be a irregular item). Their meat pies are good and Dennis makes a mean brew. Can be very busy sometimes. Are kid friendly!"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/place_review_author_2_profile_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@android:color/darker_gray"/>
-
-            <TextView
-                android:id="@+id/place_review_author_2_name_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Author name"/>
-            <TextView
-                android:id="@+id/place_review_author_2_rating_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rating 4.5"/>
-            <TextView
-                android:id="@+id/place_review_author_2_description_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Banoffee tart is a treat (when it is on the menu, seems to be a irregular item). Their meat pies are good and Dennis makes a mean brew. Can be very busy sometimes. Are kid friendly!"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-        </LinearLayout>
+        </RelativeLayout>
 
     </LinearLayout>
 

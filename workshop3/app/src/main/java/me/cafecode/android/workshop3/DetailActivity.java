@@ -3,11 +3,13 @@ package me.cafecode.android.workshop3;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.Locale;
+
+import me.cafecode.android.workshop3.models.Place;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -21,6 +23,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView ratingText = (TextView) findViewById(R.id.place_detail_rating_text);
         TextView addressText = (TextView) findViewById(R.id.place_detail_address_text);
         TextView reviewText = (TextView) findViewById(R.id.place_detail_review_text);
+        RatingBar ratingBar = (RatingBar) findViewById(R.id.place_detail_rating_bar);
 
         // TODO: Get intent data
         @DrawableRes int photo = getIntent().getIntExtra("photo", -1);
@@ -29,12 +32,23 @@ public class DetailActivity extends AppCompatActivity {
         double rating = getIntent().getDoubleExtra("rating", -1);
         String review = getIntent().getStringExtra("review");
 
+        Place place = getIntent().getParcelableExtra("place");
+
         // TODO: Bind data and views
-        photoImage.setImageResource(photo);
-        nameText.setText(name);
-        addressText.setText(address);
-        ratingText.setText(String.format(Locale.getDefault(), "%.1f", rating));
-        reviewText.setText(review);
+//        photoImage.setImageResource(photo);
+//        nameText.setText(name);
+//        addressText.setText(address);
+//        ratingText.setText(String.format(Locale.getDefault(), "%.1f", rating));
+//        reviewText.setText(review);
+//        ratingBar.setRating((float) rating);
+
+        // TODO: Bind views with place object
+        photoImage.setImageResource(place.getPhoto());
+        nameText.setText(place.getName());
+        addressText.setText(place.getAddress());
+        ratingText.setText(String.format(Locale.getDefault(), "%.1f", place.getRating()));
+        reviewText.setText(place.getReview());
+        ratingBar.setRating((float) place.getRating());
     }
 
 }

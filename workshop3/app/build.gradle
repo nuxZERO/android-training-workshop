@@ -26,5 +26,5 @@ dependencies {
     compile 'com.android.support:design:23.3.0'
 
     // TODO: 03 - Add RecyclerView compile
-    compile 'com.android.support:recyclerview-v7:23.3.0'
+
 }

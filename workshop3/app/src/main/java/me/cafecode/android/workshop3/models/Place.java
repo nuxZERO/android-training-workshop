@@ -1,7 +1,5 @@
 package me.cafecode.android.workshop3.models;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.annotation.DrawableRes;
 
 /**
@@ -9,7 +7,7 @@ import android.support.annotation.DrawableRes;
  * Email: natthawut1991@gmail.com
  */
 // TODO: 18 - Implement Parcelable
-public class Place implements Parcelable {
+public class Place {
 
     private String id = "";
     private String name = "";
@@ -29,27 +27,6 @@ public class Place implements Parcelable {
         this.photo = photo;
         this.review = review;
     }
-
-    protected Place(Parcel in) {
-        id = in.readString();
-        name = in.readString();
-        address = in.readString();
-        rating = in.readDouble();
-        photo = in.readInt();
-        review = in.readString();
-    }
-
-    public static final Creator<Place> CREATOR = new Creator<Place>() {
-        @Override
-        public Place createFromParcel(Parcel in) {
-            return new Place(in);
-        }
-
-        @Override
-        public Place[] newArray(int size) {
-            return new Place[size];
-        }
-    };
 
     public String getId() {
         return id;
@@ -97,21 +74,6 @@ public class Place implements Parcelable {
 
     public void setReview(String review) {
         this.review = review;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(id);
-        dest.writeString(name);
-        dest.writeString(address);
-        dest.writeDouble(rating);
-        dest.writeInt(photo);
-        dest.writeString(review);
     }
 
 }

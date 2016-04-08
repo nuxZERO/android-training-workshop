@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-import me.cafecode.android.workshop3.models.Place;
-
 public class DetailActivity extends AppCompatActivity {
 
     @Override
@@ -33,7 +31,6 @@ public class DetailActivity extends AppCompatActivity {
         String review = getIntent().getStringExtra("review");
 
         // TODO: 19 - Get parcel object from intent
-        Place place = getIntent().getParcelableExtra("place");
 
         // Bind data and views
         photoImage.setImageResource(photo);
@@ -44,12 +41,7 @@ public class DetailActivity extends AppCompatActivity {
         ratingBar.setRating((float) rating);
 
         // TODO: 20 - Bind views with place object
-//        photoImage.setImageResource(place.getPhoto());
-//        nameText.setText(place.getName());
-//        addressText.setText(place.getAddress());
-//        ratingText.setText(String.format(Locale.getDefault(), "%.1f", place.getRating()));
-//        reviewText.setText(place.getReview());
-//        ratingBar.setRating((float) place.getRating());
+
     }
 
 }

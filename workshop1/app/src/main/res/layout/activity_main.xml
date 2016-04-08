@@ -6,46 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="me.cafecode.android.workshop1.MainActivity">
-    <ImageView
-        android:id="@+id/photo_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/place1"/>
     <TextView
-        android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:layout_margin="16dp"
-        android:text="Title"/>
-    <TextView
-        android:id="@+id/subtitle_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:layout_marginLeft="16dp"
-        android:text="Subtitle"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp">
-        <EditText
-            android:id="@+id/message_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/send_message_button"
-            android:hint="Your message..."/>
-        <Button
-            android:id="@+id/send_message_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="#3f51af"
-            android:textColor="#fff"
-            android:padding="8dp"
-            android:text="Send Message"/>
-    </RelativeLayout>
+        android:text="Hello World"/>
 </LinearLayout>

@@ -3,11 +3,10 @@ package me.cafecode.android.workshop2;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,15 +18,11 @@ import android.widget.Toast;
 import java.util.Calendar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button debugLogButton = (Button) findViewById(R.id.button_log);
-        debugLogButton.setOnClickListener(this);
         final Button simpleToastButton = (Button) findViewById(R.id.button_simple_toast);
         simpleToastButton.setOnClickListener(this);
         final Button alignToastButton = (Button) findViewById(R.id.button_position_toast);
@@ -53,9 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button_log:
-                logConsole();
-                break;
             case R.id.button_simple_toast:
                 simpleToastAlert();
                 break;
@@ -90,17 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
-    public void logConsole() {
-        // TODO: 01 - Log console here
-        Log.i(TAG, "Send an INFO log message.");
-        Log.v(TAG, "Send a VERBOSE log message.");
-        Log.w(TAG, "Send a WARN log message.");
-        Log.wtf(TAG, "What a Terrible Failure: Report a condition that should never happen.");
-        Log.e(TAG, "Send an ERROR log message.");
-        Log.d(TAG, "Send a DEBUG log message.");
-    }
-
 
     public void simpleToastAlert() {
         // TODO: 02 - Simple Toast here

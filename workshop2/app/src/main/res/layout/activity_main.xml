@@ -12,13 +12,6 @@
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
-    <!-- Log console -->
-    <Button
-        android:id="@+id/button_log"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Debug log"/>
-
     <!-- Toast alert -->
     <Button
         android:id="@+id/button_simple_toast"

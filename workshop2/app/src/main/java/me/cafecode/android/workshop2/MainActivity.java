@@ -1,21 +1,12 @@
 package me.cafecode.android.workshop2;
 
-import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import java.util.Calendar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -105,29 +96,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void progressDialog() {
         // TODO: 06 - Progress Dialog here
-        final ProgressDialog progressDialog = ProgressDialog.show(this, "Title", "Loading...", true, true);
-        progressDialog.show();
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                progressDialog.dismiss();
+                // Dismiss dialog
+
             }
         }, 5000);
     }
 
     public void listDialog() {
         // TODO: 07 - List dialog
-        final String[] colors = {"Red", "Green", "Yellow"};
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("List dialog");
-        dialog.setItems(colors, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, colors[which], Toast.LENGTH_SHORT).show();
-            }
-        });
+
+        // Do here
+
         dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -143,12 +130,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dialog.setTitle("Single Choice");
 
         final String[] choices = {"Choice 1", "Choice 2", "Choice 3"};
-        dialog.setSingleChoiceItems(choices, 0, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, choices[which], Toast.LENGTH_SHORT).show();
-            }
-        });
+        // Do here
+
         dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -166,12 +149,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final String[] choices = { "Choice 1", "Choice 2", "Choice 3" };
         final boolean[] checked = { false, false, false };
 
-        dialog.setMultiChoiceItems(choices, checked, new DialogInterface.OnMultiChoiceClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-                Toast.makeText(MainActivity.this, choices[which], Toast.LENGTH_SHORT).show();
-            }
-        });
+        // Do here
+
         dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -183,18 +162,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void customDialog() {
         // TODO: 10 - Custom Dialog here
-        View customView = LayoutInflater.from(this).inflate(R.layout.custom_dialog, null);
-        final EditText nameInput = (EditText) customView.findViewById(R.id.input_message);
-
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Custom Dialog");
-        dialog.setView(customView);
+
+        // Do here
+
         dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
-                String message = nameInput.getText().toString();
-                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                // Get input here
 
             }
         });
@@ -209,18 +185,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void datePickerDialog() {
         // TODO: 11 - Date Picker Dialog here
-        Calendar calender = Calendar.getInstance();
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-
-                Toast.makeText(MainActivity.this, dayOfMonth+"/"+monthOfYear+"/"+year, Toast.LENGTH_SHORT).show();
-
-            }
-        }, calender.get(Calendar.YEAR), calender.get(Calendar.MONTH), calender.get(Calendar.DAY_OF_MONTH));
-        datePickerDialog.setTitle("Date Picker");
-
-        datePickerDialog.show();
+        
     }
 
 }

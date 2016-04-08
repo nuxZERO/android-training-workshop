@@ -84,12 +84,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void simpleToastAlert() {
-        // TODO: 02 - Simple Toast here
+        // TODO: 01 - Simple Toast here
         Toast.makeText(this, "Simple Toast", Toast.LENGTH_SHORT).show();
     }
 
     public void alignToastAlert() {
-        // TODO: 03 - Align Toast here
+        // TODO: 02 - Align Toast here
         Toast toast = Toast.makeText(this, "Position Toast", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.TOP|Gravity.START, 0, 0);
         toast.show();
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void customToastAlert() {
-        // TODO: 04 - Custom Toast here
+        // TODO: 03 - Custom Toast here
         View customToast = LayoutInflater.from(this).inflate(R.layout.custom_toast, null);
         Toast toast = Toast.makeText(this, "Position Toast", Toast.LENGTH_SHORT);
         toast.setView(customToast);
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void simpleAlertDialog() {
-        // TODO: 05 - Simple AlertDialog here
+        // TODO: 04 - Simple AlertDialog here
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Simple AlertDialog");
         dialog.setMessage("Hello world");
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void progressDialog() {
-        // TODO: 06 - Progress Dialog here
+        // TODO: 05 - Progress Dialog here
         final ProgressDialog progressDialog = ProgressDialog.show(this, "Title", "Loading...", true, true);
         progressDialog.show();
 
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void listDialog() {
-        // TODO: 07 - List dialog
+        // TODO: 06 - List dialog
         final String[] colors = {"Red", "Green", "Yellow"};
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void singleChoiceListDialog() {
-        // TODO: 08 - Single choice list dialog
+        // TODO: 07 - Single choice list dialog
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Single Choice");
 
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void multipleChoiceListDialog() {
-        // TODO: 09 - Multiple choice list dialog
+        // TODO: 08 - Multiple choice list dialog
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Multiple choice Choice");
 
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void customDialog() {
-        // TODO: 10 - Custom Dialog here
+        // TODO: 09 - Custom Dialog here
         View customView = LayoutInflater.from(this).inflate(R.layout.custom_dialog, null);
         final EditText nameInput = (EditText) customView.findViewById(R.id.input_message);
 
@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void datePickerDialog() {
-        // TODO: 11 - Date Picker Dialog here
+        // TODO: 10 - Date Picker Dialog here
         Calendar calender = Calendar.getInstance();
         DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override

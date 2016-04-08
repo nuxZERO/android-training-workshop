@@ -85,49 +85,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void simpleToastAlert() {
         // TODO: 02 - Simple Toast here
-        Toast.makeText(this, "Simple Toast", Toast.LENGTH_SHORT).show();
+
     }
 
     public void alignToastAlert() {
         // TODO: 03 - Align Toast here
-        Toast toast = Toast.makeText(this, "Position Toast", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.TOP|Gravity.START, 0, 0);
-        toast.show();
 
     }
 
     public void customToastAlert() {
         // TODO: 04 - Custom Toast here
-        View customToast = LayoutInflater.from(this).inflate(R.layout.custom_toast, null);
-        Toast toast = Toast.makeText(this, "Position Toast", Toast.LENGTH_SHORT);
-        toast.setView(customToast);
-        toast.show();
+
     }
 
     public void simpleAlertDialog() {
         // TODO: 05 - Simple AlertDialog here
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setTitle("Simple AlertDialog");
-        dialog.setMessage("Hello world");
-        dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
 
-            }
-        });
-        dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-            }
-        });
-//        dialog.setNeutralButton("No thanks", new DialogInterface.OnClickListener() {
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//
-//            }
-//        });
-        dialog.show();
     }
 
     public void progressDialog() {

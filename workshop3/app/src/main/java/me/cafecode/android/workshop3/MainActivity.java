@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void startPlaceDetailActivity(Place place) {
         Intent placeIntent = new Intent(this, DetailActivity.class);
-        // TODO: 02 - Pass data
+        // Pass data
         placeIntent.putExtra("photo", place.getPhoto());
         placeIntent.putExtra("name", place.getName());
         placeIntent.putExtra("rating", place.getRating());

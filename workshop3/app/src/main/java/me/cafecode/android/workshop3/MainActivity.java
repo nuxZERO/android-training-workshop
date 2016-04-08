@@ -68,23 +68,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // TODO: 05 - Get RecyclerView
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.place_list);
 
         // TODO: 06 - Set layout manager
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this,
-                LinearLayoutManager.VERTICAL,
-                false);
-        recyclerView.setLayoutManager(layoutManager);
 
         // TODO: 14 - Set adapter
-        PlaceAdapter adapter = new PlaceAdapter(this, mPlaces);
-        recyclerView.setAdapter(adapter);
 
     }
 
     private void startPlaceDetailActivity(Place place) {
         Intent placeIntent = new Intent(this, DetailActivity.class);
-        // TODO: 02 - Pass data
+        // Pass data
         placeIntent.putExtra("photo", place.getPhoto());
         placeIntent.putExtra("name", place.getName());
         placeIntent.putExtra("rating", place.getRating());

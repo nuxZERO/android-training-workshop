@@ -36,20 +36,20 @@ public class DetailActivity extends AppCompatActivity {
         Place place = getIntent().getParcelableExtra("place");
 
         // Bind data and views
-//        photoImage.setImageResource(photo);
-//        nameText.setText(name);
-//        addressText.setText(address);
-//        ratingText.setText(String.format(Locale.getDefault(), "%.1f", rating));
-//        reviewText.setText(review);
-//        ratingBar.setRating((float) rating);
+        photoImage.setImageResource(photo);
+        nameText.setText(name);
+        addressText.setText(address);
+        ratingText.setText(String.format(Locale.getDefault(), "%.1f", rating));
+        reviewText.setText(review);
+        ratingBar.setRating((float) rating);
 
         // TODO: 20 - Bind views with place object
-        photoImage.setImageResource(place.getPhoto());
-        nameText.setText(place.getName());
-        addressText.setText(place.getAddress());
-        ratingText.setText(String.format(Locale.getDefault(), "%.1f", place.getRating()));
-        reviewText.setText(place.getReview());
-        ratingBar.setRating((float) place.getRating());
+//        photoImage.setImageResource(place.getPhoto());
+//        nameText.setText(place.getName());
+//        addressText.setText(place.getAddress());
+//        ratingText.setText(String.format(Locale.getDefault(), "%.1f", place.getRating()));
+//        reviewText.setText(place.getReview());
+//        ratingBar.setRating((float) place.getRating());
     }
 
 }

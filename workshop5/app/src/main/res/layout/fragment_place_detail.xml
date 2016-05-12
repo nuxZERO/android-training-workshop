@@ -1,0 +1,97 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.cafecode.android.workshop.PlaceDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/place_detail_photo_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ImageHeader"
+            android:src="@drawable/placeholder"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/place_detail_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/place_detail_rating_text"
+                style="@style/TextTitle"
+                android:text="Novotel Sydney on Darling Harbour, 100 Murray Street, Pyrmont"/>
+
+            <TextView
+                android:id="@+id/place_detail_address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place_detail_name_text"
+                style="@style/TextSubTitle"
+                android:layout_marginTop="8dp"
+                android:text="address"/>
+
+            <TextView
+                android:id="@+id/place_detail_phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone: (02) 9439 1748"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/place_detail_rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="80dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:textSize="32sp"
+                android:textColor="#000000"
+                android:text="4.5"/>
+
+            <RatingBar
+                android:id="@+id/place_detail_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_below="@id/place_detail_rating_text"
+                android:layout_alignLeft="@id/place_detail_rating_text"
+                android:layout_alignRight="@id/place_detail_rating_text"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:isIndicator="false"
+                style="?android:attr/ratingBarStyleSmall"
+                android:rating="4.5"/>
+
+            <TextView
+                android:id="@+id/place_detail_review_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place_detail_address_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                style="@style/TextTitle"
+                android:text="Review"/>
+
+            <TextView
+                android:id="@+id/place_detail_review_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place_detail_review_header_text"
+                android:layout_marginTop="16dp"
+                style="@style/TextDescription"
+                android:text="Located on a side street from the bustling thoroughfare of Crows Nest (Willoughby Rd), this place is huge compared to the neighbouring restaurants. During Summer when the weather is nice, you will find tables encroaching onto the sidewalk and is a local favourite. \n\nFood-wise, you will find some traditional greek staples alongside some modern dishes. Definitely brings me back to the last time I was hopping around the Greek Islands. \n\nService is average. As it is a popular place, sometimes it can be hard to get a hold of a waiter/waitress. This is not to say that service is generally poor. Just non-memorable. \n\nFor a meal here, you would be expected to pay Crows Nest prices. Which is to say slightly above the average meal in Sydney. Not outrageous by any means, and to be fair is quite reasonable for the area."/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -25,10 +25,8 @@ public class DetailActivity extends AppCompatActivity {
         TextView reviewText = (TextView) findViewById(R.id.place_detail_review_text);
         RatingBar ratingBar = (RatingBar) findViewById(R.id.place_detail_rating_bar);
 
-        // TODO: 19 - Get parcel object from intent
         Place place = getIntent().getParcelableExtra("place");
 
-        // TODO: 20 - Bind views with place object
         photoImage.setImageResource(place.getPhoto());
         nameText.setText(place.getName());
         addressText.setText(place.getAddress());

@@ -32,10 +32,10 @@
 
                 <TextView
                     android:id="@+id/place_name_text"
+                    style="@style/TextTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Courtyard New York"
-                    style="@style/TextTitle"/>
+                    android:text="Courtyard New York"/>
 
                 <ImageView
                     android:id="@+id/place_rating_icon"
@@ -47,19 +47,19 @@
 
                 <TextView
                     android:id="@id/place_rating_text"
+                    style="@style/TextTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:text="4.3"
-                    style="@style/TextTitle"/>
+                    android:text="4.3"/>
 
                 <TextView
                     android:id="@+id/place_address_text"
+                    style="@style/TextSubTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/place_rating_icon"
-                    android:text="114 West 40th Street, New York"
-                    style="@style/TextSubTitle"/>
+                    android:text="114 West 40th Street, New York"/>
 
             </RelativeLayout>
 

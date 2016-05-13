@@ -7,10 +7,8 @@ import android.widget.TextView;
 
 import me.cafecode.android.workshop.R;
 
-// TODO: 10 - Make PlaceViewHolder is subclass of RecyclerView.ViewHolder
 public class PlaceViewHolder extends RecyclerView.ViewHolder {
 
-    // TODO: 11 - Create fields
     public ImageView photoImage;
     public TextView nameText;
     public TextView ratingText;
@@ -18,7 +16,6 @@ public class PlaceViewHolder extends RecyclerView.ViewHolder {
 
     public PlaceViewHolder(View itemView) {
         super(itemView);
-        // TODO: 12 - Get view from `adapter_place` layout
         photoImage = (ImageView) itemView.findViewById(R.id.place_image);
         nameText = (TextView) itemView.findViewById(R.id.place_name_text);
         ratingText = (TextView) itemView.findViewById(R.id.place_rating_text);

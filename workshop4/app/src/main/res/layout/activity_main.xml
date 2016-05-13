@@ -10,8 +10,8 @@
     <!-- TODO: 04 - Insert RecyclerView -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/place_list"
+        style="@style/RecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        style="@style/RecyclerView"/>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

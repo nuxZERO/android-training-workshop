@@ -1,16 +1,11 @@
 package me.cafecode.android.workshop.models;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Review {
 
-    @SerializedName("author_name")
     private String authorName;
 
-    @SerializedName("author_url")
     private String authorUrl;
 
-    @SerializedName("profile_photo_url")
     private String profilePhotoUrl;
 
     private double rating;

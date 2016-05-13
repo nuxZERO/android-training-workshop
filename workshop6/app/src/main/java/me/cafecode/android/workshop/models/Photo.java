@@ -1,10 +1,7 @@
 package me.cafecode.android.workshop.models;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Photo {
 
-    @SerializedName("photo_reference")
     private String photoReference;
 
     private int height;

@@ -6,11 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
-import me.cafecode.android.workshop.Constants;
 import me.cafecode.android.workshop.R;
 import me.cafecode.android.workshop.models.Place;
 
@@ -47,11 +44,9 @@ public class PlaceAdapter extends RecyclerView.Adapter<PlaceViewHolder> {
         holder.addressText.setText(place.getVicinity());
 
         try {
-            Picasso.with(mContext)
-                    .load(String.format(Constants.GOOGLE_PLACE_PHOTO_URL, place.getPhotos().get(0).getPhotoReference(), Constants.API_KEY))
-                    .placeholder(R.drawable.placeholder)
-                    .error(R.drawable.placeholder)
-                    .into(holder.photoImage);
+            // TODO: Load place image
+
+
         } catch (NullPointerException e) {
 
         }

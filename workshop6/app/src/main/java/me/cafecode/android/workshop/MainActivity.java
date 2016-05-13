@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
             actionBar.setDisplayShowCustomEnabled(true);
         }
 
-        // TODO: Is multi screen?
+        // Is multi screen?
         if (findViewById(R.id.place_detail_content) != null) {
 //            replacePlaceDetailFragment(mPlaces.get(0));
         } else if (findViewById(R.id.place_content) != null) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    // TODO: Replace PlaceDetailFragment
+    // Replace PlaceDetailFragment
     private void replacePlaceDetailFragment(Place place) {
         PlaceDetailFragment detailFragment = PlaceDetailFragment.newInstance(place.getId());
         if (findViewById(R.id.place_detail_content) != null) {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    // TODO: Implement fragment interaction
+    // Implement fragment interaction
     @Override
     public void onFragmentInteraction(Place place) {
         Toast.makeText(MainActivity.this, place.getName(), Toast.LENGTH_SHORT).show();

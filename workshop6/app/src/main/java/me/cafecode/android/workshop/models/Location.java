@@ -1,13 +1,9 @@
 package me.cafecode.android.workshop.models;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Location {
 
-    @SerializedName("lat")
     private double latitude;
 
-    @SerializedName("lng")
     private double longitude;
 
     public Location() {

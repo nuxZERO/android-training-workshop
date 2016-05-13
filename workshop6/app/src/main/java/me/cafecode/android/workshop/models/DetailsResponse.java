@@ -1,12 +1,9 @@
 package me.cafecode.android.workshop.models;
 
-import com.google.gson.annotations.SerializedName;
-
 public class DetailsResponse {
 
     private String status;
 
-    @SerializedName("result")
     private Place place;
 
     public DetailsResponse() {

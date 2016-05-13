@@ -2,18 +2,14 @@ package me.cafecode.android.workshop.models;
 
 import android.support.annotation.DrawableRes;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class Place {
 
-    @SerializedName("place_id")
     private String id = "";
 
     private String name = "";
 
-    @SerializedName("formatted_address")
     private String address = "";
 
     private String vicinity = "";

@@ -1,17 +1,13 @@
 package me.cafecode.android.workshop.models;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 public class NearbySearchResponse {
 
     private String status;
 
-    @SerializedName("next_page_token")
     private String nextPageToken;
 
-    @SerializedName("results")
     private List<Place> places;
 
     public NearbySearchResponse() {

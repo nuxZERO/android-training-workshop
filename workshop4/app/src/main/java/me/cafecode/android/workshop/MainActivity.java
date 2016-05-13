@@ -33,12 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // TODO: Custom ActionBar
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setCustomView(R.layout.action_bar);
-            actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayShowCustomEnabled(true);
-        }
+
     }
 
 }

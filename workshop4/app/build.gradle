@@ -27,7 +27,4 @@ dependencies {
 
     // TODO: 03 - Add RecyclerView compile
     compile 'com.android.support:recyclerview-v7:23.3.0'
-    
-    // TODO: CardView
-    compile 'com.android.support:cardview-v7:23.3.0'
 }

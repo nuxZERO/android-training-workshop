@@ -13,7 +13,6 @@
 
         <ImageView
             android:id="@+id/place_detail_photo_image"
-            style="@style/ImageHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/placeholder"/>
@@ -25,7 +24,6 @@
 
             <TextView
                 android:id="@+id/place_detail_name_text"
-                style="@style/TextTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toLeftOf="@+id/place_detail_rating_text"
@@ -33,7 +31,6 @@
 
             <TextView
                 android:id="@+id/place_detail_address_text"
-                style="@style/TextSubTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/place_detail_name_text"
@@ -73,7 +70,6 @@
 
             <TextView
                 android:id="@+id/place_detail_review_header_text"
-                style="@style/TextTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/place_detail_address_text"
@@ -83,7 +79,6 @@
 
             <TextView
                 android:id="@+id/place_detail_review_text"
-                style="@style/TextDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/place_detail_review_header_text"

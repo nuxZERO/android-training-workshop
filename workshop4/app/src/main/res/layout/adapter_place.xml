@@ -5,13 +5,6 @@
               android:orientation="horizontal">
 
     <!-- TODO: Add CardView -->
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +25,6 @@
 
                 <TextView
                     android:id="@+id/place_name_text"
-                    style="@style/TextTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Courtyard New York"/>
@@ -47,7 +39,6 @@
 
                 <TextView
                     android:id="@id/place_rating_text"
-                    style="@style/TextTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -55,7 +46,6 @@
 
                 <TextView
                     android:id="@+id/place_address_text"
-                    style="@style/TextSubTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/place_rating_icon"
@@ -64,7 +54,5 @@
             </RelativeLayout>
 
         </LinearLayout>
-
-    </android.support.v7.widget.CardView>
 
 </LinearLayout>

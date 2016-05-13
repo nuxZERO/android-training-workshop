@@ -35,12 +35,7 @@ public class DetailActivity extends AppCompatActivity {
         ratingBar.setRating((float) place.getRating());
 
         // TODO: Custom ActionBar
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setCustomView(R.layout.action_bar);
-            actionBar.setDisplayShowTitleEnabled(false);
-            actionBar.setDisplayShowCustomEnabled(true);
-        }
+
     }
 
 }

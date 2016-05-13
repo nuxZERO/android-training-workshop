@@ -5,10 +5,6 @@ import java.util.List;
 
 import me.cafecode.android.workshop.R;
 
-/**
- * Created by Natthawut Hemathulin on 5/10/16 AD.
- * Email: natthawut1991@gmail.com
- */
 public class PlaceList {
 
     public static List<Place> getPlaceList() {

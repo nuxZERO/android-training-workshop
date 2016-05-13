@@ -4,6 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <!-- TODO: Add fragment view -->
     <fragment
         android:id="@+id/place_list_content"
         android:layout_width="0dp"
@@ -11,6 +12,7 @@
         android:layout_weight="1"
         android:name="me.cafecode.android.workshop.PlaceListFragment"/>
 
+    <!-- TODO: -->
     <FrameLayout
         android:id="@+id/place_detail_content"
         android:layout_width="0dp"

@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity
         // TODO: Custom ActionBar
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+            actionBar.setTitle("Hello");
             actionBar.setCustomView(R.layout.action_bar);
             actionBar.setDisplayShowTitleEnabled(false);
             actionBar.setDisplayShowCustomEnabled(true);
@@ -41,12 +42,13 @@ public class MainActivity extends AppCompatActivity
 
     private void replacePlaceDetailFragment(Place place) {
         // TODO: Replace PlaceDetailFragment
-        PlaceDetailFragment detailFragment = PlaceDetailFragment.newInstance(
-                place.getPhoto(),
-                place.getName(),
-                place.getRating(),
-                place.getAddress(),
-                place.getReview());
+        PlaceDetailFragment detailFragment = new PlaceDetailFragment();
+//        PlaceDetailFragment detailFragment = PlaceDetailFragment.newInstance(
+//                place.getPhoto(),
+//                place.getName(),
+//                place.getRating(),
+//                place.getAddress(),
+//                place.getReview());
         if (findViewById(R.id.place_detail_content) != null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.place_detail_content, detailFragment)

@@ -15,16 +15,16 @@ import java.util.Locale;
 
 public class PlaceDetailFragment extends Fragment {
 
+
+    // TODO: Rename and change types of parameters
     private static final String ARG_PHOTO = "photo";
     private static final String ARG_NAME = "name";
     private static final String ARG_RATING = "rating";
     private static final String ARG_ADDRESS = "address";
     private static final String ARG_REVIEW = "review";
 
-    // TODO: Rename and change types of parameters
-    private
     @DrawableRes
-    int mPhoto;
+    private int mPhoto;
     private String mName;
     private double mRating;
     private String mAddress;
@@ -41,15 +41,7 @@ public class PlaceDetailFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param name    Parameter 1.
-     * @param address Parameter 2.
-     * @return A new instance of fragment PlaceDetailFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+    // TODO: Create instance
     public static PlaceDetailFragment newInstance(@DrawableRes int photo, String name, double rating, String address, String review) {
         PlaceDetailFragment fragment = new PlaceDetailFragment();
         Bundle args = new Bundle();
